@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const calculateSafety  = require("./calculateSafety");
 //const pool = require("./db");
 //middleware
 app.use(cors());
@@ -11,7 +12,8 @@ app.get("/calculate", async (req, res) => {
     console.log({
       budget, worklocation
     })
-    res.status(400).json({budget,worklocation})
+    safetyStars = calculateSafety(worklocation)
+    res.status(400).json(safetyStars)
   });
 //get, put, post, delete stuff
 app.listen(5000, () => {
