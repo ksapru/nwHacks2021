@@ -259,6 +259,9 @@ form button {
   .Login {
     text-align: center;
   }
+  .welcome {
+    padding-right: 0;
+  }
   
 }
 
@@ -267,7 +270,6 @@ form button {
     padding: 50px 12px;
   }
   .welcome {
-    padding: 0;
     text-shadow: 2px 2px 16px #00000099;
   }
   h2 {
