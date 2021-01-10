@@ -8,10 +8,12 @@ import {Link} from 'react-router-dom';
 
 
 function Product(props) {
-    return ( 
-
+    return (
         <div className= "Product">
             <div className="prod">
+                <a href="../"><img id="logo-2-3" src="/images/logo.png" alt="Find my Neighbourhood"></img></a>
+
+                <h2>Top 5 Neighbourhoods for you</h2>
    
                 <div className="result">
                     <p class="orderNum">#1</p>
@@ -20,7 +22,7 @@ function Product(props) {
                             <img src="images/vancouver.jpeg" alt={props.name}/>
                         </div>
                         <div className="result-text">
-                            <h5> {props.name} </h5>
+                            <h5> University Endowment Lands </h5>
                             
                             <p> {props.message} </p> 
                             <p> {props.price} </p>
@@ -103,8 +105,6 @@ function Product(props) {
                     </div>
                 </div>
 
-
-            
             </div>
         </div>
     
