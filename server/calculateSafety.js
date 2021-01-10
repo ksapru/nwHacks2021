@@ -4,7 +4,7 @@ module.exports = (workLocation) => {
         case "arbutus ridge": //21 cases total
             safetyStars = 5; 
             break; 
-        case "central business district"://804 cases total 
+        case "downtown"://804 cases total 
             safetyStars = 0;
             break; 
         case "dunbar - southlands": //29

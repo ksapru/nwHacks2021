@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const calculateSafety  = require("./calculateSafety");
 const calculateRestaurants = require("./calculateRestaurants");
+const calculateStations = require("./calculateStations");
+
 const initialLoad = require("./initialLoad");
 const tempResponse = require("./tempResponse.json")
 
