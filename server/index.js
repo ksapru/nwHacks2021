@@ -1,8 +1,10 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
 const calculateSafety  = require("./calculateSafety");
-const calculateRestaurants = require("./calculateRestaurants")
+const calculateRestaurants = require("./calculateRestaurants");
+const initialLoad = require("./initialLoad");
+
+const app = express();
 require('dotenv').config();
 
 
@@ -16,9 +18,9 @@ app.get("/calculate", async (req, res) => {
     console.log({
       budget, worklocation
     })
-    let a= calculateRestaurants("central business district");
+    // let a= calculateRestaurants("central business district");
     
-    console.log("asd",a)
+    // console.log("asd",a)
     //console.log(ratingSum)
     safetyStars = calculateSafety(worklocation)
     res.status(400).json(safetyStars)
@@ -26,4 +28,5 @@ app.get("/calculate", async (req, res) => {
 //get, put, post, delete stuff
 app.listen(5000, () => {
     console.log("server has started on port 5000");
+    initialLoad();
   });

@@ -1,4 +1,4 @@
-,id,name,url,datetime,price,where,lat,long
+counter,id,name,url,datetime,price,where,lat,long
 0,7253222080,Fully furnished room available in a shared basement for Jan 15,https://vancouver.craigslist.org/van/roo/d/vancouver-fully-furnished-room/7253222080.html,2021-01-09 16:20,$700,Vancouver,49.2156,-123.0979
 1,7255642766,"Marine Dr. Near Superstore, Furnished, Utilities Included",https://vancouver.craigslist.org/van/roo/d/vancouver-marine-dr-near-superstore/7255642766.html,2021-01-09 16:07,$640,South Vancouver,49.211836,-123.094597
 2,7254287696,Furnished room available Jan 15th or Feb 1st,https://vancouver.craigslist.org/van/roo/d/chilliwack-furnished-room-available-jan/7254287696.html,2021-01-09 16:06,$835,False Creek,49.264318,-123.121934
