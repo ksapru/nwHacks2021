@@ -53,7 +53,7 @@ const dummy = (priceRange,safety,publicTransit,restaurants) => {
 const handleCalculations = async(priceRange,safety,publicTransit,restaurants) =>  {
   console.log("sddasdsa")
     try {
-      const response = await axios.post('/calculate');
+      const response = await axios.post('/calculate',{priceRange,safety,publicTransit,restaurants});
 
       return response.data 
      // response.body.data // array
@@ -96,7 +96,10 @@ export default function Login() {
       console.log("useEffect",responseArray)
     });
     
-
+    const handleChange = (event, newValue) => {
+      console.log(newValue)
+      setPriceRange(newValue);
+    };
     return (
         <div className="Login">
             <a href="#"><img id="logo-full" src="/images/logo.png" alt="Find my Neighbourhood"></img></a>
@@ -111,8 +114,8 @@ export default function Login() {
                     <h4 class="first">Help us find your new home</h4>
                     <label for="price-range">Price Range</label><br></br>
                     <PriceSlider
-        defaultValue={20}
- 
+        defaultValue={[500,700]}
+        onChange={handleChange}
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider-restrict"
         step={100}
