@@ -5,9 +5,9 @@ module.exports = async (house, rest, safety) => {
   function calc(house, rest, safety) {
     console.log("a: ", house, rest, safety)
     try {
-      return (house * .5) + (rest /10  * .25) + (safety / 5 * .25)
+      return ((house * .5) + (rest /10  * .25) + (safety / 5 * .25)) * 100
     } catch {
-      return (house * .75) + (safety * .25)
+      return ((house * .75) + (safety * .25)) * 100
     }
   }
 
