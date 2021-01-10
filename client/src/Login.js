@@ -1,5 +1,5 @@
-import React, {useState,useEffect}from 'react'; 
 import React from 'react'; 
+import {useState,useEffect} from 'react'; 
 //import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 //import Button from '@material-ui/core/Button';
 import Typography from "@material-ui/core/Typography";
@@ -15,9 +15,6 @@ import Product from './Product';
 const useStyles = makeStyles((theme) => ({
   }));
 
-
-const useStyles = makeStyles((theme) => ({
-  }));
 
 
 const marks = [
@@ -62,12 +59,6 @@ const handleCalculations = async(priceRange,safety,publicTransit,restaurants) =>
       console.log("got an error")
   }
 }
-    },
-    {
-      value: 100,
-      label: "$2000/mo",
-    },
-]
 
 function valuetext(value) {
     return `$${value.map(0,100,600,2000)}/mo`;
@@ -102,11 +93,7 @@ export default function Login() {
                 <form>
                     <h5 class="first">Help us find your new home</h5>
                     <label for="price-range">Price Range</label><br></br>
-
                     <Slider id="price-range" onChange={(value, event) => setPriceRange(value)} range={[[0,10],[10,20]]} defaultValue={[30,70]} min={0} max={100} color={"#4B8A44"} step={1}></Slider>
-
-                    <Slider id="price-range" range={[[0,10],[10,20]]} defaultValue={[30,70]} min={0} max={100} color={"#4B8A44"} step={1}></Slider>
-
 
                     <label for="location">Work/School Location</label><br style={{margin: "0px 0px 10px 0px"}}></br>
                     <TextField id="location" variant="outlined" label="Your Work or School Address" helperText="(Optional)"
@@ -115,7 +102,6 @@ export default function Login() {
 
                     <h5>How much does the following matter to you?</h5>
                     <label for="safety-rating">Safety</label><br></br>
-
                     <Slider id="safety-rating"  onChange={(value, event) => setSafety(value)} defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
 
                     <label for="transit-rating">Public transit</label><br></br>
@@ -137,22 +123,6 @@ export default function Login() {
                             }); 
                         });
                           }}>Find my neighbourhood</button>
-                    <Route path="/" render={props=><Product/>} /> 
-
-                    <Slider id="safety-rating" defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
-
-                    <label for="transit-rating">Public transit</label><br></br>
-                    <Slider id="transit-rating" defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
-
-                    <label for="food-rating">Restaurants</label><br></br>
-                    <Slider id="food-rating" defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
-
-                    <Link to='/Product'>
-                        <button type="button" id="search">Find my neighbourhood</button>
-                    </Link>
-                    <Route path="/" component="Product" /> 
-
-
                 </form>
              </div>
         </div>
