@@ -1,48 +1,33 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom';
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+//import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+//import Button from '@material-ui/core/Button';
+import Typography from "@material-ui/core/Typography";
+import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import { Slider } from 'material-ui-slider';
+import { TextField } from '@material-ui/core';
 
-const BootstrapButton = withStyles({
-    root: {
-      boxShadow: 'none',
-      textTransform: 'none',
-      fontSize: 16,
-      padding: '6px 12px',
-      border: '1px solid',
-      lineHeight: 1.5,
-      backgroundColor: '#0063cc',
-      borderColor: '#0063cc',
-      fontFamily: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-      ].join(','),
-      '&:hover': {
-        backgroundColor: '#0069d9',
-        borderColor: '#0062cc',
-        boxShadow: 'none',
-      },
-      '&:active': {
-        boxShadow: 'none',
-        backgroundColor: '#0062cc',
-        borderColor: '#005cbf',
-      },
-      '&:focus': {
-        boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-      },
+const useStyles = makeStyles((theme) => ({
+  }));
+
+const marks = [
+    {
+      value: 0,
+      label: "$600/mo",
     },
-  })(Button);
+    {
+      value: 100,
+      label: "$2000/mo",
+    },
+]
 
+function valuetext(value) {
+    return `$${value.map(0,100,600,2000)}/mo`;
+}
 
 export default function Login() {
+    const classes = useStyles();
+
     return (
         <div className="Login">
             <a href="#"><img id="logo-full" src="/images/logo.png" alt="Find my Neighbourhood"></img></a>
@@ -54,20 +39,24 @@ export default function Login() {
                 </div>
             
                 <form>
-                    <h5>Help us find your new home</h5>
-                    <label for="">Price Range</label><br></br>
-                    <input type="range" min="0" max="100" step="1"></input>
-                    <select><option>Low</option><option>High</option></select><br></br>
-                    <label for="">Work/School Location</label><br></br>
-                    <input type="text" id="location"></input><br></br>
+                    <h5 class="first">Help us find your new home</h5>
+                    <label for="price-range">Price Range</label><br></br>
+                    <Slider id="price-range" range={[[0,10],[10,20]]} defaultValue={[30,70]} min={0} max={100} color={"#4B8A44"} step={1}></Slider>
+
+                    <label for="location">Work/School Location</label><br style={{margin: "0px 0px 10px 0px"}}></br>
+                    <TextField id="location" variant="outlined" label="Your Work or School Address" helperText="(Optional)"
+                    style={{ width: '100%' }}
+                    ></TextField>
 
                     <h5>How much does the following matter to you?</h5>
-                    <label for="">Safety</label><br></br>
-                    <select><option>Low</option><option>High</option></select><br></br>
-                    <label for="">Public transit</label><br></br>
-                    <select><option>Low</option><option>High</option></select><br></br>
-                    <label for="">Restaurants</label><br></br>
-                    <select><option>10</option><option>High</option></select><br></br>
+                    <label for="safety-rating">Safety</label><br></br>
+                    <Slider id="safety-rating" defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
+
+                    <label for="transit-rating">Public transit</label><br></br>
+                    <Slider id="transit-rating" defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
+
+                    <label for="food-rating">Restaurants</label><br></br>
+                    <Slider id="food-rating" defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
 
                     <button type="button" id="search">Find my neighbourhood</button>
                         

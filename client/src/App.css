@@ -4,12 +4,6 @@
   background-image: url(https://images.unsplash.com/photo-1587351156331-f833af4a3350?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1400&q=80);
   background-size: cover;
 
-  /*position: fixed;*/
-  /*min-width: 100%;
-  min-height: 100%;*/
-  
-  /*background-position: center;*/
-
   color: #ffffff;
   font-family: 'Quicksand', 'sans-serif';
   font-weight: 300;
@@ -27,6 +21,7 @@
 
 h2 {
   font-size: 5vh;
+  line-height: 5vh;
 }
 
 h4 {
@@ -37,6 +32,7 @@ h4 {
 h5 {
   font-weight: bold;
   font-size: 1.4vh;
+  line-height: 1.4vh;
 }
 
 box {
@@ -54,10 +50,14 @@ box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  padding-bottom: 10%;
 }
 
 .welcome {
   text-shadow: 2px 2px 12px #00000060;
+
+  padding-right: 3em;
 }
 
 .welcome h2 {
@@ -65,7 +65,7 @@ box {
 }
 
 .welcome h4 {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 form {
@@ -83,7 +83,7 @@ form label {
 }
 
 form h5 {
-  margin: 10px 0;
+  margin: 32px 0px 16px 0px;
 }
 
 form input {
@@ -104,58 +104,15 @@ button {
   border-radius: 12px;
 }
 
-
-/* Slider */
-
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
+form button {
+  margin-top: 16px;
 }
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
+.textfield {
   width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
 }
 
-/* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 16px;
-  width: 16px;
-  border-radius: 100px;
-  background: #4B8A44;
-  cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-}
 
-/* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  height: 16px;
-  width: 16px;
-  border-radius: 100px;
-  background: #4B8A44;
-  cursor: pointer;
-}
-
-/* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-  height: 16px;
-  width: 16px;
-  border-radius: 100px;
-  background: #4B8A44;
-  cursor: pointer;
+.first {
+  margin-top: 0 !important;
 }
