@@ -6,6 +6,11 @@ import { withStyles } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import { Slider } from 'material-ui-slider';
 import { TextField } from '@material-ui/core';
+import ReactDOM from 'react-dom';
+import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+import {BrowserRouter as Route} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   }));
@@ -58,8 +63,11 @@ export default function Login() {
                     <label for="food-rating">Restaurants</label><br></br>
                     <Slider id="food-rating" defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
 
-                    <button type="button" id="search">Find my neighbourhood</button>
-                        
+                    <Link to='/Product'>
+                        <button type="button" id="search">Find my neighbourhood</button>
+                    </Link>
+                    <Route path="/" component="Product" /> 
+
                 </form>
              </div>
         </div>
