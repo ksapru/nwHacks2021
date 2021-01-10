@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Product from "./Product";
 import {Box, Button} from '@material-ui/core';
 
+
+ 
 function App() {
 
   return (
@@ -16,13 +18,21 @@ function App() {
       <Login></Login>   
 
 
-      <Switch> <Route to="/Product" exact component={Product} /> <Route path="/" exact component={Login} /> Find my neighbourhood </Switch>
+      <Switch> 
+
+      <Route path="/" exact to component={Login} /> 
+      </Switch>
+      
+      
       <h2>Top 5 neighbourhoods for you</h2>
 
-         <Product></Product>
-         <Product></Product>
-         <Product></Product>
-         <Product></Product>
+        
+
+         <Product number="1" chosenicon=""/>
+         <Product number="2" chosenicon=""/>
+         <Product number="3" chosenicon=""/>
+         <Product number="4" chosenicon=""/>
+         <Product number="5" chosenicon=""/>
          
 
       </div>
@@ -33,3 +43,4 @@ function App() {
 }
 
 export default App;
+
