@@ -12,22 +12,41 @@ import { Link } from 'react-router-dom';
 import {BrowserRouter as Route, useHistory} from 'react-router-dom';
 import axios from './axios';
 import Product from './Product';
+import PriceSlider from '@material-ui/core/Slider';
+
 const useStyles = makeStyles((theme) => ({
   }));
 
 
 
-const marks = [
+  const marks = [
     {
-      value: 0,
-      label: "$600/mo",
+      value: 300,
+      label: '$300',
+    },
+    {
+      value: 600,
+      label: '$600',
+    },
+    {
+      value: 900,
+      label: '$900',
+    },
+    {
+      value: 1200,
+      label: '$1200',
+    },
+    {
+      value: 1500,
+      label: '$1500',
+    },
+  ];
+  
+  function valuetext(value) {
+    return `${value}°C`;
+  }
+  
 
-    },
-    {
-      value: 100,
-      label: "$2000/mo",
-    },
-]
 const dummy = (priceRange,safety,publicTransit,restaurants) => {
   console.log('dsa')
 }
@@ -60,9 +79,7 @@ const handleCalculations = async(priceRange,safety,publicTransit,restaurants) =>
   }
 }
 
-function valuetext(value) {
-    return `$${value.map(0,100,600,2000)}/mo`;
-}
+
 
 export default function Login() {
     const classes = useStyles();
@@ -93,13 +110,23 @@ export default function Login() {
                 <form>
                     <h4 class="first">Help us find your new home</h4>
                     <label for="price-range">Price Range</label><br></br>
-                    <Slider id="price-range" onChange={(value, event) => setPriceRange(value)} range={[[0,10],[10,20]]} defaultValue={[30,70]} min={0} max={100} color={"#4B8A44"} step={1}></Slider>
+                    <PriceSlider
+        defaultValue={20}
+ 
+        getAriaValueText={valuetext}
+        aria-labelledby="discrete-slider-restrict"
+        step={100}
+        valueLabelDisplay="auto"
+        marks={marks}
+        min={300}
+        max={1500}
+      />
 
                     <label for="location">Work/School Location</label><br style={{margin: "0px 0px 10px 0px"}}></br>
-                    <TextField id="location" variant="outlined" label="Your Work or School Address" helperText="(Optional)"
+                    <TextField id="location" variant="outlined" 
                     style={{ width: '100%' }}
                     ></TextField>
-
+                    
                     <h4>How much does the following matter to you?</h4>
                     <label for="safety-rating">Safety</label><br></br>
                     <Slider id="safety-rating"  onChange={(value, event) => setSafety(value)} defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
