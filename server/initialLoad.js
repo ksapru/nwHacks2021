@@ -1,6 +1,6 @@
 const pool = require('./db')
 const uploadCSV = require('./utils/uploadCSV.js')
-const getNeighbourhood = require('./utils/getNeighbourhoodfromCoords.js')
+const getNeighbourhood = require('./utils/getNeighbourhoodFromCoords.js')
 
 module.exports = async () => {
   // console.log(__dirname)

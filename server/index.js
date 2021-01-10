@@ -3,6 +3,7 @@ const cors = require("cors");
 const calculateSafety  = require("./calculateSafety");
 const calculateRestaurants = require("./calculateRestaurants");
 const initialLoad = require("./initialLoad");
+const tempResponse = require("./tempResponse.json")
 
 const app = express();
 require('dotenv').config();
@@ -12,13 +13,15 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json()); //req.body
 //ss
-app.get("/calculate", async (req, res) => {
+app.post("/calculate", async (req, res) => {
     let {budget, worklocation} = req.body;
     console.log({
       budget, worklocation
     })
 
-    res.status(400).json("ok")
+    console.log(req.body)
+
+    res.status(400).json(tempResponse)
 });
 
 //get, put, post, delete stuff
