@@ -1,7 +1,6 @@
 const fs = require('fs')
 const [pgp, db] = require('../db')
 const parse = require('csv-parse');
-const { RSA_PKCS1_PSS_PADDING } = require('constants');
 
 module.exports = async (tableName, directory) => {
 
