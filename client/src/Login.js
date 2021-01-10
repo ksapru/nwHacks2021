@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import {BrowserRouter as Route} from 'react-router-dom';
 
 const BootstrapButton = withStyles({
     root: {
@@ -69,9 +70,10 @@ export default function Login() {
                     <select><option>Low</option><option>High</option></select><br></br>
                     <label for="">Restaurants</label><br></br>
                     <select><option>10</option><option>High</option></select><br></br>
-
+                    <Link to='/Product'>
                     <button type="button" id="search">Find my neighbourhood</button>
-                        
+                    </Link>
+                    <Route path="/" component="Product" /> 
                 </form>
              </div>
         </div>
