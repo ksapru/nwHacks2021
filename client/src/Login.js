@@ -87,11 +87,11 @@ export default function Login() {
             <div class="container">
                 <div class="welcome">
                     <h2>WELCOME TO VANCOUVER</h2> 
-                    <h4>Find a neighbourhood to settle into.</h4>
+                    <h3>Find a neighbourhood to settle into.</h3>
                 </div>
             
                 <form>
-                    <h5 class="first">Help us find your new home</h5>
+                    <h4 class="first">Help us find your new home</h4>
                     <label for="price-range">Price Range</label><br></br>
                     <Slider id="price-range" onChange={(value, event) => setPriceRange(value)} range={[[0,10],[10,20]]} defaultValue={[30,70]} min={0} max={100} color={"#4B8A44"} step={1}></Slider>
 
@@ -100,7 +100,7 @@ export default function Login() {
                     style={{ width: '100%' }}
                     ></TextField>
 
-                    <h5>How much does the following matter to you?</h5>
+                    <h4>How much does the following matter to you?</h4>
                     <label for="safety-rating">Safety</label><br></br>
                     <Slider id="safety-rating"  onChange={(value, event) => setSafety(value)} defaultValue={10} min={0} max={100} color={"#4B8A44"} decimals={0}></Slider>
 
