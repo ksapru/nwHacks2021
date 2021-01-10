@@ -1,12 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const calculateSafety  = require("./calculateSafety");
-const calculateRestaurants = require("./calculateRestaurants");
-const calculateStations = require("./calculateStations");
+// const calculateRestaurants = require("./etl/Restaurants");
+// const calculateStations = require("./calculateStations");
 const calculateHouses = require("./calculateHouses.js")
+const calculateRating = require("./calculateRating.js")
 
 const initialLoad = require("./initialLoad");
-const tempResponse = require("./tempResponse.json")
+const tempResponse = require("./tempResponse.json");
+const calculateRestaurants = require("./calculateRestaurants");
 
 const app = express();
 require('dotenv').config();
@@ -17,24 +19,40 @@ app.use(cors());
 app.use(express.json()); //req.body
 //ss
 app.post("/calculate", async (req, res) => {
-    let {priceRange, safety, publicTransit, restaurants} = req.body;
+    let {budget, safety, publicTransit, restaurants} = req.body;
     console.log({
-      budget, worklocation
+      budget, safety
     })
 
-    let housing = []
+    let housing_rating = []
+    let restaurant_rating = []
+    let safety_rating = []
+    let rating = []
 
-    if (priceRange.length == 2) {
-      housing = calculateHouses(priceRange[0], priceRange[1]);
+    if (typeof budget !== 'undefined') {
+      housing_rating = await calculateHouses(budget[0], budget[1]);
     }
+    if (typeof restaurants !== 'undefined') {
+      restaurant_rating = await calculateRestaurants();
+    }
+    // value should be from 0 to 100
+    if (typeof safety !== 'undefined') {
+      for (const [key, value] of Object.entries(housing_rating)) {
+        safety_rating[key] = await calculateSafety(key)
+      }
+      // safety_rating[housing_rating.neighbourhood] = await calculateSafety(housing_rating.neighbourhood)
+    }
+
+    rating = await calculateRating(housing_rating, restaurant_rating, safety_rating)
 
     console.log(req.body)
 
-    res.status(200).json(tempResponse)
+    // res.status(200).json(tempResponse)
+    res.status(200).json(rating)
 });
 
 //get, put, post, delete stuff
-app.listen(5000, () => {
-    console.log("server has started on port 5000");
+app.listen(8080, () => {
+    console.log("server has started on port 8080");
     initialLoad();
   });
