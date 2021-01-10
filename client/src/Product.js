@@ -24,9 +24,9 @@ function Product(props) {
                         </div>
                         <div className="result-text">
                             <h5> {responseArray[0].neighbourhood} </h5>
-                            <p> Safety: {responseArray[0].safety}</p>
-                            <p> Transit:{responseArray[0].transit} </p>
-                            <p> Food: {responseArray[0].food}</p>
+                            <p> Safety: <strong>{responseArray[0].safety}</strong></p>
+                            <p> Transit: <strong>{responseArray[0].transit}</strong></p>
+                            <p> Food: <strong>{responseArray[0].food}</strong></p>
                         </div>
                     </div>
                 </div>
@@ -39,9 +39,9 @@ function Product(props) {
                         </div>
                         <div className="result-text">
                             <h5> {responseArray[1].neighbourhood} </h5>
-                            <p> Safety: {responseArray[1].safety}</p>
-                            <p> Transit:{responseArray[1].transit} </p>
-                            <p> Food: {responseArray[1].food}</p>
+                            <p> Safety: <strong>{responseArray[1].safety}</strong></p>
+                            <p> Transit: <strong>{responseArray[1].transit}</strong></p>
+                            <p> Food: <strong>{responseArray[1].food}</strong></p>
                         </div>
                     </div>
                 </div>
@@ -54,9 +54,9 @@ function Product(props) {
                         </div>
                         <div className="result-text">
                             <h5> {responseArray[2].neighbourhood} </h5>
-                            <p> Safety: {responseArray[2].safety}</p>
-                            <p> Transit:{responseArray[2].transit} </p>
-                            <p> Food: {responseArray[2].food}</p>
+                            <p> Safety: <strong>{responseArray[2].safety}</strong></p>
+                            <p> Transit: <strong>{responseArray[2].transit}</strong></p>
+                            <p> Food: <strong>{responseArray[2].food}</strong></p>
                         </div>
                     </div>
                 </div>
@@ -69,9 +69,9 @@ function Product(props) {
                         </div>
                         <div className="result-text">
                             <h5> {responseArray[3].neighbourhood} </h5>
-                            <p> Safety: {responseArray[3].safety}</p>
-                            <p> Transit:{responseArray[3].transit} </p>
-                            <p> Food: {responseArray[3].food}</p>
+                            <p> Safety: <strong>{responseArray[3].safety}</strong></p>
+                            <p> Transit: <strong>{responseArray[3].transit}</strong></p>
+                            <p> Food: <strong>{responseArray[3].food}</strong></p>
                         </div>
                     </div>
                 </div>
@@ -84,9 +84,9 @@ function Product(props) {
                         </div>
                         <div className="result-text">
                             <h5> {responseArray[4].neighbourhood} </h5>
-                            <p> Safety: {responseArray[4].safety}</p>
-                            <p> Transit:{responseArray[4].transit} </p>
-                            <p> Food: {responseArray[4].food}</p>
+                            <p> Safety: <strong>{responseArray[4].safety}</strong></p>
+                            <p> Transit: <strong>{responseArray[4].transit}</strong></p>
+                            <p> Food: <strong>{responseArray[4].food}</strong></p>
                         </div>
                     </div>
                 </div>
