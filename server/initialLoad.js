@@ -11,4 +11,5 @@ module.exports = async () => {
   // rentalData()
   // uploadCSV('raw_rental', __dirname+'/datapull/rental/rentals1.csv')
   // uploadCSV('neighbourhoods', __dirname+'/datapull/neighbourhoods/neighbourhoods.csv')
+  uploadCSV('restaurants', __dirname+'/datapull/restaurant/restaurants.csv')
 };

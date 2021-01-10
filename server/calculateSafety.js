@@ -1,5 +1,8 @@
 module.exports = (workLocation) => {
     let safetyStars = 0;
+    if (typeof workLocation == 'undefined') {
+      return 0
+    }
     switch(workLocation.toLowerCase()) { 
         case "arbutus ridge": //21 cases total
             safetyStars = 5; 
