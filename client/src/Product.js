@@ -25,7 +25,7 @@ function Product(props) {
                     <p className="orderNum">#1</p>
                     <div className="result-block">
                         <div className="result-img">
-                            <img src={`images/${responseArray[0].neighbourhood}.jpeg`} alt={responseArray[0].neighbourhood}/>
+                            <img src={`images/${responseArray[0].neighbourhood}.jpg`} alt={responseArray[0].neighbourhood}/>
                         </div>
                         <div className="result-text">
                             <h4> {responseArray[0].neighbourhood} <strong style={{color: numberToColor(responseArray[0].match)}}>({responseArray[0].match}%)</strong></h4>
@@ -40,7 +40,7 @@ function Product(props) {
                     <p className="orderNum">#2</p>
                     <div className="result-block">
                         <div className="result-img">
-                            <img src={`images/${responseArray[1].neighbourhood}.jpeg`} alt={responseArray[1].neighbourhood} width="150px" height="100px"/>
+                            <img src={`images/${responseArray[1].neighbourhood}.jpg`} alt={responseArray[1].neighbourhood} width="150px" height="100px"/>
                         </div>
                         <div className="result-text">
                             <h4> {responseArray[1].neighbourhood} <strong style={{color: numberToColor(responseArray[1].match)}}>({responseArray[1].match}%)</strong></h4>
@@ -55,7 +55,7 @@ function Product(props) {
                     <p className="orderNum">#3</p>
                     <div className="result-block">
                         <div className="result-img">
-                            <img src={`images/${responseArray[2].neighbourhood}.jpeg`} alt={responseArray[2].neighbourhood} width="150px" height="100px"/>
+                            <img src={`images/${responseArray[2].neighbourhood}.jpg`} alt={responseArray[2].neighbourhood} width="150px" height="100px"/>
                         </div>
                         <div className="result-text">
                             <h4> {responseArray[2].neighbourhood} <strong style={{color: numberToColor(responseArray[2].match)}}>({responseArray[2].match}%)</strong></h4>
@@ -70,7 +70,7 @@ function Product(props) {
                     <p className="orderNum">#4</p>
                     <div className="result-block">
                         <div className="result-img">
-                            <img src={`images/${responseArray[3].neighbourhood}.jpeg`} alt={responseArray[3].neighbourhood} width="150px" height="100px"/>
+                            <img src={`images/${responseArray[3].neighbourhood}.jpg`} alt={responseArray[3].neighbourhood} width="150px" height="100px"/>
                         </div>
                         <div className="result-text">
                             <h4> {responseArray[3].neighbourhood} <strong style={{color: numberToColor(responseArray[3].match)}}>({responseArray[3].match}%)</strong></h4>
@@ -85,7 +85,7 @@ function Product(props) {
                     <p className="orderNum">#5</p>
                     <div className="result-block">
                         <div className="result-img">
-                            <img src={`images/${responseArray[4].neighbourhood}.jpeg`} alt={responseArray[4].neighbourhood} width="150px" height="100px"/>
+                            <img src={`images/${responseArray[4].neighbourhood}.jpg`} alt={responseArray[4].neighbourhood} width="150px" height="100px"/>
                         </div>
                         <div className="result-text">
                             <h4> {responseArray[4].neighbourhood} <strong style={{color: numberToColor(responseArray[4].match)}}>({responseArray[4].match}%)</strong></h4>
