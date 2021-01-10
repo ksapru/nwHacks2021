@@ -2,8 +2,6 @@ import React from 'react';
 //import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 //import Button from '@material-ui/core/Button';
 import Typography from "@material-ui/core/Typography";
-import { withStyles } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core/styles';
 import { Slider } from 'material-ui-slider';
 import { TextField } from '@material-ui/core';
 import ReactDOM from 'react-dom';

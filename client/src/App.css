@@ -4,6 +4,8 @@
   background-image: url(https://images.unsplash.com/photo-1587351156331-f833af4a3350?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1400&q=80);
   background-size: cover;
 
+  height: 100vh;
+
   color: #ffffff;
   font-family: 'Quicksand', 'sans-serif';
   font-weight: 300;
@@ -115,4 +117,84 @@ form button {
 
 .first {
   margin-top: 0 !important;
+}
+
+
+
+/* Product Page */
+
+.Product {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #eeeeee;
+  color: #000000;
+
+  /*padding: 20px;
+  border-radius: 39px;
+  border-collapse: separate;
+  border-spacing: 15px;
+  list-style-type: none;
+  max-width: 600px;
+  min-height: 500px;
+  margin-right: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;*/
+
+
+}
+
+.prod {
+  margin: 50px 100px;
+}
+
+.result {
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: row;
+
+  font-weight: 300;
+}
+
+.orderNum {
+  font-weight: 700;
+  color: #AAAAAA;
+  font-size: 42px;
+
+  margin: 0 1em 0 0;
+}
+
+.result-block {
+  background-color: #fff;
+
+  border-radius: 22px;
+
+  min-width: 1000px;
+  min-height: 200px;
+
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-direction: row;*/
+}
+
+.result-img {
+  margin: 0 10px 0 0;
+
+  /*height: 100px;
+  width: 100px;*/
+
+  height: 100%;
+  width: 200px;
+}
+
+.result-img img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-style: none;
+
+  border-radius: 22px;
 }

@@ -11,32 +11,12 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
-      <Login></Login>
-
+     <div className="App">
     
-     
-
-
       <Switch> 
-      <Route path="/" exact component={Login} /> 
-  
-
-    
+        <Route path="/" to exact component={Login} /> 
+        <Route path="/Product" to exact component={Product} /> 
       </Switch>
-      
-    
-      
-      <h2>Top 5 neighbourhoods for you</h2>
-
-        
-
-         <Product number="1" chosenicon=""/>
-         <Product number="2" chosenicon=""/>
-         <Product number="3" chosenicon=""/>
-         <Product number="4" chosenicon=""/>
-         <Product number="5" chosenicon=""/>
-         
 
       </div>
     </Router>
