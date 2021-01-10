@@ -23,7 +23,7 @@ app.post("/calculate", async (req, res) => {
 
     console.log(req.body)
 
-    res.status(400).json(tempResponse)
+    res.status(200).json(tempResponse)
 });
 
 //get, put, post, delete stuff
