@@ -19,18 +19,18 @@ app.use(cors());
 app.use(express.json()); //req.body
 //ss
 app.post("/calculate", async (req, res) => {
-    let {budget, safety, publicTransit, restaurants} = req.body;
+    let {priceRange, safety, publicTransit, restaurants} = req.body;
     console.log({
-      budget, safety
+      priceRange, safety
     })
 
-    let housing_rating = []
-    let restaurant_rating = []
-    let safety_rating = []
+    let housing_rating = {}
+    let restaurant_rating = {}
+    let safety_rating = {}
     let rating = []
 
-    if (typeof budget !== 'undefined') {
-      housing_rating = await calculateHouses(budget[0], budget[1]);
+    if (typeof priceRange !== 'undefined') {
+      housing_rating = await calculateHouses(priceRange[0], priceRange[1]);
     }
     if (typeof restaurants !== 'undefined') {
       restaurant_rating = await calculateRestaurants();
@@ -47,12 +47,17 @@ app.post("/calculate", async (req, res) => {
 
     console.log(req.body)
 
-    // res.status(200).json(tempResponse)
-    res.status(200).json(rating)
+    console.log("rating", rating)
+
+    if (rating.length == 0) {
+      res.status(200).json(tempResponse)
+    } else {
+      res.status(200).json(rating)
+    }
 });
 
 //get, put, post, delete stuff
 app.listen(8080, () => {
     console.log("server has started on port 8080");
-    initialLoad();
+    // initialLoad();
   });
