@@ -1,9 +1,9 @@
 import './App.css';
 import Login from './Login';
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Product from "./Product";
-import {Box, Button} from '@material-ui/core';
+
 
 
  
@@ -15,14 +15,17 @@ function App() {
     
 
     
-      <Login></Login>   
+     
 
 
       <Switch> 
+      <Route path="/" exact component={Login} /> 
+  
 
-      <Route path="/" exact to component={Login} /> 
+    
       </Switch>
       
+    
       
       <h2>Top 5 neighbourhoods for you</h2>
 
@@ -43,4 +46,3 @@ function App() {
 }
 
 export default App;
-
