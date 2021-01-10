@@ -3,6 +3,7 @@ const cors = require("cors");
 const calculateSafety  = require("./calculateSafety");
 const calculateRestaurants = require("./calculateRestaurants");
 const calculateStations = require("./calculateStations");
+const calculateHouses = require("./calculateHouses.js")
 
 const initialLoad = require("./initialLoad");
 const tempResponse = require("./tempResponse.json")
@@ -16,10 +17,16 @@ app.use(cors());
 app.use(express.json()); //req.body
 //ss
 app.post("/calculate", async (req, res) => {
-    let {budget, worklocation} = req.body;
+    let {priceRange, safety, publicTransit, restaurants} = req.body;
     console.log({
       budget, worklocation
     })
+
+    let housing = []
+
+    if (priceRange.length == 2) {
+      housing = calculateHouses(priceRange[0], priceRange[1]);
+    }
 
     console.log(req.body)
 
