@@ -11,25 +11,12 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
+     <div className="App">
     
-
-    
-     
-
-
       <Switch> 
-      <Route path="/" to exact component={Login} /> 
-      <Route path="/Product" to exact component={Product} /> 
-
-  
-
-    
+        <Route path="/" to exact component={Login} /> 
+        <Route path="/Product" to exact component={Product} /> 
       </Switch>
-      
-    
-  
-         
 
       </div>
     </Router>
@@ -39,4 +26,3 @@ function App() {
 }
 
 export default App;
-
