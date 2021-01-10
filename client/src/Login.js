@@ -111,9 +111,10 @@ export default function Login() {
                     <h4 class="first">Help us find your new home</h4>
                     <label for="price-range">Price Range</label><br></br>
                     <PriceSlider
-        value={[500, 1000]}
+        defaultValue={[500,700]}
+ 
         getAriaValueText={valuetext}
-        aria-labelledby="range-slider"
+        aria-labelledby="discrete-slider-restrict"
         step={100}
         valueLabelDisplay="auto"
         marks={marks}
