@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const calculateSafety  = require("./calculateSafety");
 const calculateRestaurants = require("./calculateRestaurants");
+const calculateStations = require("./calculateStations");
+
 const initialLoad = require("./initialLoad");
 
 const app = express();
@@ -17,7 +19,7 @@ app.get("/calculate", async (req, res) => {
     console.log({
       budget, worklocation
     })
-
+    calculateStations()
     res.status(400).json("ok")
 });
 //get, put, post, delete stuff
