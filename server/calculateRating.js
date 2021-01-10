@@ -12,7 +12,7 @@ module.exports = async (house, rest, safety) => {
   }
 
   for (const [key, value] of Object.entries(house)) {
-    rating.push({"neighbourhood": key, "match": calc(value.rating, rest[key]?.rating, safety[key]), "safety": safety[key]?.rating, "transit": Math.random()*10, "food": rest[key]?.rating
+    rating.push({"neighbourhood": key, "match": calc(value.rating, rest[key]?.rating, safety[key]), "safety": safety[key], "transit": Math.random()*10, "food": rest[key]?.rating
     })
   }
 
