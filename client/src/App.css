@@ -1,11 +1,21 @@
 .App {
-  text-align: center;
-  background-image: url(https://images.unsplash.com/photo-1531838021332-0dff55ae58a9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1596&q=80);
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
+  /*text-align: center;*/
+  background: no-repeat center center fixed;
+  background-image: url(https://images.unsplash.com/photo-1587351156331-f833af4a3350?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1400&q=80);
   background-size: cover;
-  background-position: center;
+  justify-content: space-around;
+  justify-items: space-around;
+  height: 100vh;
+
+  /*position: fixed;*/
+  /*min-width: 100%;
+  min-height: 100%;*/
+  
+  /*background-position: center;*/
+
+  color: #ffffff;
+  font-family: 'Quicksand', 'sans-serif';
+  font-weight: 300;
 }
 
 .App-logo {
@@ -13,24 +23,158 @@
   pointer-events: none;
 }
 
+.Login {
+  padding: 50px 100px;
+  color: #ffffff;
+}
 
 h2 {
-  font-family: 'Quicksand', sans-serif;
-  color: antiquewhite;
-  align-items: left;
-  font-size: 6vh;
-  text-align: left;
+  font-size: 5vh;
 }
 
 h4 {
-  font-family: 'Quicksand', sans-serif;
-  color: antiquewhite;
-  text-align: center;
-  font-size: 3vh;
+  font-size: 2.5vh;
+  font-weight: 400;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 1.4vh;
 }
 
 box {
   width: 300px;
   height: 200px;
 
+}
+
+#logo-full {
+  max-width: 180px;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.welcome {
+  text-shadow: 2px 2px 12px #00000060;
+}
+
+.welcome h2 {
+  margin-bottom: 0;
+}
+
+.welcome h4 {
+  margin-top: 10px;
+}
+
+form {
+  color: #000000;
+  background: rgba(255,255,255,85%);
+  padding: 30px;
+  border-radius: 4px;
+  
+  max-width: 300px;
+  margin-right: 0px;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form h5 {
+  margin: 10px 0;
+}
+
+form input {
+  width: 100%;
+}
+
+button {
+  background-color: #4B8A44;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Quicksand';
+  font-weight: 600;
+
+  width: 100%;
+  padding: 8px;
+  box-shadow: 0px 3px 6px #00000029;
+  border: none;
+  border-radius: 12px;
+}
+
+.Product {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 39px;
+  border-collapse: separate;
+  border-spacing: 15px;
+  list-style-type: none;
+  max-width: 600px;
+  min-height: 500px;
+  margin-right: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+/* Slider */
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 100px;
+  background: #4B8A44;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 100px;
+  background: #4B8A44;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 100px;
+  background: #4B8A44;
+  cursor: pointer;
 }
