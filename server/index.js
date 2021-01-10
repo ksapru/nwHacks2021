@@ -20,6 +20,7 @@ app.get("/calculate", async (req, res) => {
 
     res.status(400).json("ok")
 });
+
 //get, put, post, delete stuff
 app.listen(5000, () => {
     console.log("server has started on port 5000");
