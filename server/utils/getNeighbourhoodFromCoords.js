@@ -15,5 +15,6 @@ module.exports = async (lat, long) => {
       console.log("error")
       // console.log(error)
     });
-    return neighbourhood.replace("-", " - ")
+
+    return neighbourhood?.replace("-", " - ")
 }
