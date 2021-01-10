@@ -53,7 +53,7 @@ const dummy = (priceRange,safety,publicTransit,restaurants) => {
 const handleCalculations = async(priceRange,safety,publicTransit,restaurants) =>  {
   console.log("sddasdsa")
     try {
-      const response = await axios.post('/calculate');
+      const response = await axios.post('/calculate',{priceRange,safety,publicTransit,restaurants});
 
       return response.data 
      // response.body.data // array
@@ -111,10 +111,9 @@ export default function Login() {
                     <h4 class="first">Help us find your new home</h4>
                     <label for="price-range">Price Range</label><br></br>
                     <PriceSlider
-        defaultValue={20}
- 
+        value={[500, 1000]}
         getAriaValueText={valuetext}
-        aria-labelledby="discrete-slider-restrict"
+        aria-labelledby="range-slider"
         step={100}
         valueLabelDisplay="auto"
         marks={marks}
