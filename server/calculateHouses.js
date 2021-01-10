@@ -15,6 +15,7 @@ module.exports = async (minValue, maxValue) => {
 
   ranking.sort((a, b) => b.rating - a.rating)
 
-  console.log(neighbourhoods)
-  console.log(ranking)
+  return ranking
+  // console.log(neighbourhoods)
+  // console.log(ranking)
 }

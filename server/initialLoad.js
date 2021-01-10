@@ -7,7 +7,7 @@ const calculateHouses = require("./calculateHouses.js")
 module.exports = async () => {
   // console.log(__dirname)
   // console.log(await getNeighbourhood(49.269605, -123.044643))
-  calculateHouses(300, 700);
+  // calculateHouses(300, 700);
   // rentalData()
   // uploadCSV('raw_rental', __dirname+'/datapull/rental/rentals1.csv')
   // uploadCSV('neighbourhoods', __dirname+'/datapull/neighbourhoods/neighbourhoods.csv')
